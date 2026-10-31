@@ -1,0 +1,143 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "morichan.moc3",
+		"Textures": [
+			"morichan.4096/texture_00.png"
+		],
+		"Motions": {
+			"Idle": [
+				{
+					"File": "motions/idle_02.motion3.json"
+				},
+				{
+					"File": "motions/idle_03.motion3.json"
+				},
+				{
+					"File": "motions/ear_nor.motion3.json"
+				},
+				{
+					"File": "motions/ear_nor_l.motion3.json"
+				},
+				{
+					"File": "motions/tail_nor.motion3.json"
+				}
+			],
+			"TapHead": [
+				{
+					"File": "motions/ear_shuqi.motion3.json"
+				},
+				{
+					"File": "motions/ear_shuqi_jieshu.motion3.json"
+				},
+				{
+					"File": "motions/ear_shuqi_huifu.motion3.json"
+				},
+				{
+					"File": "motions/ear_shandong.motion3.json"
+				}
+			],
+			"TapBody": [
+				{
+					"File": "motions/ear_dala.motion3.json"
+				},
+				{
+					"File": "motions/ear_dala_huifu.motion3.json"
+				},
+				{
+					"File": "motions/ear_diluo.motion3.json"
+				},
+				{
+					"File": "motions/ear_diluo_huifu.motion3.json"
+				},
+				{
+					"File": "motions/ear_doudong.motion3.json"
+				}
+			],
+			"TapTail": [
+				{
+					"File": "motions/tail_shuqi.motion3.json"
+				},
+				{
+					"File": "motions/tail_xingfen.motion3.json"
+				},
+				{
+					"File": "motions/tail_doudong.motion3.json"
+				},
+				{
+					"File": "motions/tail_fangxia.motion3.json"
+				}
+			],
+			"TapFace": [
+				{
+					"File": "motions/anger_hold.motion3.json"
+				},
+				{
+					"File": "motions/dizzy.motion3.json"
+				},
+				{
+					"File": "motions/ear_xingfen.motion3.json"
+				}
+			],
+			"Story": [
+				{
+					"File": "motions/m_01.motion3.json"
+				},
+				{
+					"File": "motions/m_02.motion3.json"
+				},
+				{
+					"File": "motions/m_03.motion3.json"
+				},
+				{
+					"File": "motions/m_04.motion3.json"
+				},
+				{
+					"File": "motions/m_05.motion3.json"
+				},
+				{
+					"File": "motions/m_06.motion3.json"
+				},
+				{
+					"File": "motions/m_07.motion3.json"
+				},
+				{
+					"File": "motions/m_08.motion3.json"
+				},
+				{
+					"File": "motions/m_09.motion3.json"
+				},
+				{
+					"File": "motions/m_10.motion3.json"
+				},
+				{
+					"File": "motions/m_11.motion3.json"
+				},
+				{
+					"File": "motions/m_12.motion3.json"
+				},
+				{
+					"File": "motions/m_13.motion3.json"
+				}
+			]
+		},
+		"Physics": "morichan.physics3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [],
+			"Values": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthA"
+			],
+			"Values": []
+		}
+	],
+	"HitAreas": []
+}

@@ -1,0 +1,21 @@
+node_modules/
+.userdata/
+.npm-cache/
+.electron-cache/
+.tmp/
+dist/
+
+# 运行日志 / 崩溃记录
+pet.log
+pet.log.1
+crash-*.log
+debug.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# 构建缓存
+*.blockmap

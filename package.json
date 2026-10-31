@@ -1,0 +1,78 @@
+{
+  "name": "mori-pet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "morichan desktop pet (Electron + pixi-live2d-display)",
+  "author": "sishuichangliu",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron . --enable-logging",
+    "dist": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "live2dcubismcore": "^1.0.2",
+    "pixi-live2d-display": "0.4.0",
+    "pixi.js": "6.5.10"
+  },
+  "devDependencies": {
+    "electron": "30.5.1",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "io.github.sishuichangliu.morichan",
+    "productName": "灵狐召唤器",
+    "copyright": "模型、动作、台词来自《狐姬零》(AsicxArt) · Copyright © 2026 sishuichangliu",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "assets/mori.ico",
+      "assets/tray.png",
+      "ATTRIBUTION.txt",
+      "package.json",
+      "!node_modules/live2dcubismcore/characters/**",
+      "!node_modules/live2dcubismcore/faces/**",
+      "!docs/**",
+      "!pet.log",
+      "!pet.log.1",
+      "!crash-*.log",
+      "!.userdata/**",
+      "!dist/**",
+      "!.tmp/**"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/models",
+        "to": "models"
+      },
+      {
+        "from": "ATTRIBUTION.txt",
+        "to": "ATTRIBUTION.txt"
+      },
+      {
+        "from": "使用提示.txt",
+        "to": "使用提示.txt"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/mori.ico",
+      "artifactName": "${name}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "灵狐召唤器",
+      "license": "ATTRIBUTION.txt",
+      "include": "build/installer.nsh",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

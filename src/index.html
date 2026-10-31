@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>morichan</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+  body { cursor: default; -webkit-user-select: none; user-select: none; }
+  #stage { position: absolute; left: 0; bottom: 0; width: 380px; height: 520px; }
+  #stage canvas { display: block; width: 380px; height: 520px; }
+
+  /* ---------- 对话框 ---------- */
+  #dialog {
+    position: absolute; left: 50%; bottom: 508px; transform: translateX(-50%) scale(0.85);
+    width: max-content;   /* 关键：否则 left:50% 之后只剩半个窗口宽，文字被挤成窄条再被裁 */
+    max-width: min(344px, calc(100vw - 16px));  /* 不能超过窗口宽度，否则气泡会被窗口裁掉 */
+    min-width: 90px;
+    padding: 11px 15px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 150, 190, 0.55);
+    border-radius: 14px;
+    color: #5a4550;
+    font: 14px/1.6 "Microsoft YaHei", system-ui, sans-serif;
+    letter-spacing: 0.3px;
+    filter: drop-shadow(0 6px 14px rgba(255, 120, 170, 0.28));
+    opacity: 0;
+    transition: opacity 150ms ease, transform 180ms cubic-bezier(.2, .9, .3, 1.2);
+    pointer-events: auto;
+    word-break: break-word;
+    /* 不再截断到 3 行：长句会完整显示，超高时由 dialog.js 自动缩小字号兜底 */
+    max-height: 128px;
+    overflow: hidden;
+  }
+  #dialog.show { opacity: 1; transform: translateX(-50%) scale(1); }
+
+  /* 小尾巴 */
+  #dialog::after {
+    content: '';
+    position: absolute; left: 50%; bottom: -7px;
+    width: 12px; height: 12px;
+    margin-left: -6px;
+    background: rgba(255, 255, 255, 0.94);
+    border-right: 1px solid rgba(255, 150, 190, 0.55);
+    border-bottom: 1px solid rgba(255, 150, 190, 0.55);
+    transform: rotate(45deg);
+    border-radius: 0 0 3px 0;
+  }
+  #overlay {
+    position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
+    font: 13px/1.7 "Microsoft YaHei", system-ui, sans-serif; color: #5a4550; text-align: center;
+    background: rgba(255, 240, 246, .92); border-radius: 14px; padding: 18px; box-sizing: border-box;
+    pointer-events: none;
+  }
+  #overlay.show { display: flex; }
+  #overlay b { display: block; margin-bottom: 6px; color: #d94f7a; }
+  #overlay code { background: #fff; padding: 1px 5px; border-radius: 5px; color: #9b6a80; }
+</style>
+</head>
+<body>
+  <div id="stage"></div>
+  <div id="dialog"></div>
+  <div id="overlay"></div>
+
+  <!-- 1) Cubism Core（必须最先加载） -->
+  <script src="../node_modules/live2dcubismcore/live2dcubismcore.min.js"></script>
+  <!-- 2) PIXI 6 -->
+  <script src="../node_modules/pixi.js/dist/browser/pixi.min.js"></script>
+  <!-- 3) pixi-live2d-display (cubism4) -->
+  <script src="../node_modules/pixi-live2d-display/dist/cubism4.min.js"></script>
+  <!-- 4) 应用逻辑 -->
+  <script src="./lines.js"></script>
+  <script src="./dialog.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

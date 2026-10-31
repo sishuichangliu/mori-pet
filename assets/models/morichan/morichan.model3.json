@@ -1,0 +1,98 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "morichan.moc3",
+		"Textures": [
+			"morichan.4096/texture_00.png"
+		],
+		"Physics": "morichan.physics3.json",
+		"Motions": {
+			"Idle": [
+				{
+					"File": "motions/ear_nor.motion3.json"
+				},
+				{
+					"File": "motions/ear_nor_l.motion3.json"
+				},
+				{
+					"File": "motions/tail_nor.motion3.json"
+				}
+			],
+			"TapHead": [
+				{
+					"File": "motions/ear_shuqi.motion3.json"
+				},
+				{
+					"File": "motions/ear_shuqi_jieshu.motion3.json"
+				},
+				{
+					"File": "motions/ear_shuqi_huifu.motion3.json"
+				},
+				{
+					"File": "motions/ear_shandong.motion3.json"
+				}
+			],
+			"TapBody": [
+				{
+					"File": "motions/ear_dala.motion3.json"
+				},
+				{
+					"File": "motions/ear_dala_huifu.motion3.json"
+				},
+				{
+					"File": "motions/ear_diluo.motion3.json"
+				},
+				{
+					"File": "motions/ear_diluo_huifu.motion3.json"
+				},
+				{
+					"File": "motions/ear_doudong.motion3.json"
+				}
+			],
+			"TapTail": [
+				{
+					"File": "motions/tail_shuqi.motion3.json"
+				},
+				{
+					"File": "motions/tail_xingfen.motion3.json"
+				},
+				{
+					"File": "motions/tail_doudong.motion3.json"
+				},
+				{
+					"File": "motions/tail_fangxia.motion3.json"
+				}
+			],
+			"TapFace": [
+				{
+					"File": "motions/anger_hold.motion3.json"
+				},
+				{
+					"File": "motions/dizzy.motion3.json"
+				},
+				{
+					"File": "motions/ear_xingfen.motion3.json"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeA"
+			],
+			"Values": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthA"
+			],
+			"Values": []
+		}
+	],
+	"HitAreas": []
+}

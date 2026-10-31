@@ -1,0 +1,29 @@
+﻿《灵狐召唤器》素材署名与授权说明
+
+一、素材来源
+
+    模型、动作、台词来自《狐姬零》(AsicxArt)
+
+二、权利归属
+
+    上述模型（Live2D）、动作数据、角色设定及相关美术资源的著作权
+    归 AsicxArt 及《狐姬零》原始作者所有。
+    本程序仅作个人使用与展示，不单独售卖、不再分发原始素材文件。
+
+三、授权情况
+
+    本项目使用上述素材已获得原作者授权，授权范围与凭证以作者提供的授权文件为准。
+
+四、本程序部分
+
+    程序代码、界面与交互设计：Copyright © 2026 sishuichangliu
+
+    如对素材使用有任何疑问，或需撤回授权，请联系项目作者，
+    本项目将立即停止分发含该素材的版本。
+
+----------------------------------------------------------------
+
+Attributions
+  Model, motions and lines are from "Fox Hime Zero" (狐姬零) by AsicxArt.
+  All such assets remain the property of their original authors and are
+  used here with permission. Application code © 2026 sishuichangliu.
