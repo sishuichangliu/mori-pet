@@ -1,4 +1,4 @@
-name: Release
+﻿name: Release
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         run: |
           # 输出同时进控制台和 build.log；失败时把结尾逐行打成注解，
           # 这样即使打不开 Actions 页面，也能通过 check-runs API 读到原因
-          npx electron-builder --win nsis --x64 2>&1 | Tee-Object -FilePath build.log
+          npx electron-builder --win nsis --x64 --publish never 2>&1 | Tee-Object -FilePath build.log
           $code = $LASTEXITCODE
           if ($code -ne 0) {
             Write-Host "::error::electron-builder 退出码 $code"
