@@ -25,7 +25,17 @@ jobs:
         run: npm ci
 
       - name: 构建安装包
-        run: npx electron-builder --win nsis --x64
+        shell: pwsh
+        run: |
+          # 输出同时进控制台和 build.log；失败时把结尾逐行打成注解，
+          # 这样即使打不开 Actions 页面，也能通过 check-runs API 读到原因
+          npx electron-builder --win nsis --x64 2>&1 | Tee-Object -FilePath build.log
+          $code = $LASTEXITCODE
+          if ($code -ne 0) {
+            Write-Host "::error::electron-builder 退出码 $code"
+            Get-Content build.log -Tail 25 | ForEach-Object { Write-Host "::error::$($_)" }
+            exit $code
+          }
 
       - name: 生成 SHA256
         shell: pwsh
